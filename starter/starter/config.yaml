@@ -1,5 +1,7 @@
 model_training:
   training_data_path: starter/data/census_clean.csv
+  trained_model_path: starter/model/model.cbm
+  metrics_file_path: starter/metrics/slice_output.txt
   model_grid_search_hparams:
     learning_rate: 
     # - 0.03

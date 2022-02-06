@@ -37,7 +37,20 @@ def train_model(X_train, y_train, grid_params, cat_features=None, iterations=Non
 
 
 def evaluate_slice_metrics(model, X, y, slice_column):
-    pass
+    slice_vals_metrics = {}
+    slice_values = X[slice_column].unique()
+
+    for val in slice_values:
+        slice_indexes = X[slice_column]==val
+        X_slice = X[slice_indexes]
+        y_slice = y[slice_indexes]
+        preds_slice = model.predict(X_slice)
+        precision, recall, fbeta = compute_model_metrics(y_slice, preds_slice)
+        slice_vals_metrics.update({val: {"precision": precision, "recall": recall, "fbeta": fbeta}})
+    
+    slice_metrics = {slice_column: slice_vals_metrics}
+    return slice_metrics
+
 
 
 def compute_model_metrics(y, preds):
