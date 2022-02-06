@@ -1,0 +1,17 @@
+name: udacity_project_deploy
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pip:
+    - catboost
+    - dvc
+    - ipykernel
+    - numpy
+    - pandas
+    - scikit-learn
+    - pytest
+    - requests
+    - fastapi==0.63.0
+    - uvicorn
+    - gunicorn

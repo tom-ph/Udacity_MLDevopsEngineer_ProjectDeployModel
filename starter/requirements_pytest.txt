@@ -1,3 +1,4 @@
+catboost
 numpy
 pandas
 scikit-learn

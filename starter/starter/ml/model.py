@@ -1,8 +1,9 @@
+from catboost import CatBoostClassifier
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 
 
 # Optional: implement hyperparameter tuning.
-def train_model(X_train, y_train):
+def train_model(X_train, y_train, grid_params, cat_features=None, iterations=None):
     """
     Trains a machine learning model and returns it.
 
@@ -12,12 +13,30 @@ def train_model(X_train, y_train):
         Training data.
     y_train : np.array
         Labels.
+    grid_params : dict
+        The grid search parameters
+    cat_features : list
+        The list of categorical features
+    iterations : int
+        Number of iterations during training
     Returns
     -------
-    model
+    model : catboost.CatBoostClassifier
         Trained machine learning model.
+    grid_search_result : dict
+        A dict with the best parameters and the test results
     """
+    model = CatBoostClassifier(cat_features=cat_features, iterations=iterations)
 
+    grid_search_result = model.grid_search(grid_params,
+                                        X=X_train,
+                                        y=y_train,
+                                        stratified=True)
+
+    return model, grid_search_result
+
+
+def evaluate_slice_metrics(model, X, y, slice_column):
     pass
 
 
@@ -48,7 +67,7 @@ def inference(model, X):
 
     Inputs
     ------
-    model : ???
+    model : catboost.CatBoostClassifier
         Trained machine learning model.
     X : np.array
         Data used for prediction.
@@ -57,4 +76,5 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    pass
+    preds = model.predict(X)
+    return preds

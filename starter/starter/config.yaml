@@ -1,0 +1,13 @@
+model_training:
+  training_data_path: starter/data/census_clean.csv
+  model_grid_search_hparams:
+    learning_rate: 
+    # - 0.03
+    - 0.1
+    depth: 
+    - 4
+    - 6
+    # - 10
+    l2_leaf_reg: 
+    - 1
+    # - 1
