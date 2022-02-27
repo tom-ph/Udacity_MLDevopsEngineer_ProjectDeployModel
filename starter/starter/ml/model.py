@@ -36,23 +36,6 @@ def train_model(X_train, y_train, grid_params, cat_features=None, iterations=Non
     return model, grid_search_result
 
 
-def evaluate_slice_metrics(model, X, y, slice_column):
-    slice_vals_metrics = {}
-    slice_values = X[slice_column].unique()
-
-    for val in slice_values:
-        slice_indexes = X[slice_column]==val
-        X_slice = X[slice_indexes]
-        y_slice = y[slice_indexes]
-        preds_slice = model.predict(X_slice)
-        precision, recall, fbeta = compute_model_metrics(y_slice, preds_slice)
-        slice_vals_metrics.update({val: {"precision": precision, "recall": recall, "fbeta": fbeta}})
-    
-    slice_metrics = {slice_column: slice_vals_metrics}
-    return slice_metrics
-
-
-
 def compute_model_metrics(y, preds):
     """
     Validates the trained machine learning model using precision, recall, and F1.
@@ -91,3 +74,20 @@ def inference(model, X):
     """
     preds = model.predict(X)
     return preds
+
+def evaluate_slice_metrics(model, X, y, slice_column, round_digits=3):
+    slice_vals_metrics = {}
+    slice_values = X[slice_column].unique()
+
+    for val in slice_values:
+        slice_indexes = X[slice_column]==val
+        X_slice = X[slice_indexes]
+        y_slice = y[slice_indexes]
+        preds_slice = model.predict(X_slice)
+        precision, recall, fbeta = compute_model_metrics(y_slice, preds_slice)
+        if not round_digits is None:
+            precision, recall, fbeta = round(precision, round_digits), round(recall, round_digits), round(fbeta, round_digits)
+        slice_vals_metrics.update({val: {"precision": precision, "recall": recall, "fbeta": fbeta}})
+    
+    slice_metrics = {slice_column: slice_vals_metrics}
+    return slice_metrics

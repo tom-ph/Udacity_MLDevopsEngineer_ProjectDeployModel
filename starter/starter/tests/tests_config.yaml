@@ -10,9 +10,8 @@ data:
   - native-country
   label: salary
 model_training:
-  training_data_path: starter/data/census_clean.csv
-  trained_model_path: starter/model/model.cbm
-  metrics_folder_path: starter/metrics
+  training_data_path: starter/data/tests/census_clean_sample.csv
+  trained_model_path: starter/model/tests/model_sample.cbm
   training_iterations: 10
   model_grid_search_hparams:
     learning_rate: 
