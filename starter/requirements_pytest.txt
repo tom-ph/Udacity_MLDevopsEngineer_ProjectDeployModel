@@ -5,6 +5,6 @@ scikit-learn
 pytest
 requests
 fastapi==0.63.0
-yaml
+ruamel.yaml
 uvicorn
 gunicorn
