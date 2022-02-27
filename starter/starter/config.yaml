@@ -2,26 +2,26 @@ data:
   categorical_features:
   - workclass
   - education
-  - marital-status
+  - marital_status
   - occupation
   - relationship
   - race
   - sex
-  - native-country
+  - native_country
   label: salary
 model_training:
-  training_data_path: starter/data/census_clean.csv
-  trained_model_path: starter/model/model.cbm
-  metrics_folder_path: starter/metrics
-  training_iterations: 10
+  training_data_path: data/census_clean.csv
+  trained_model_path: model/model.cbm
+  label_encoder: model/label_encoder.pkl
+  metrics_folder_path: metrics
+  training_iterations: 1000
   model_grid_search_hparams:
     learning_rate: 
-    # - 0.03
+    - 0.05
     - 0.1
     depth: 
-    - 4
     - 6
-    # - 10
+    - 8
+    - 10
     l2_leaf_reg: 
     - 1
-    # - 1

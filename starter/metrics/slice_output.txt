@@ -1,39 +1,39 @@
 {
     "workclass": {
         "State-gov": {
-            "precision": 0.753,
+            "precision": 0.775,
             "recall": 0.691,
-            "fbeta": 0.721
+            "fbeta": 0.731
         },
         "Self-emp-not-inc": {
-            "precision": 0.673,
-            "recall": 0.572,
-            "fbeta": 0.618
+            "precision": 0.684,
+            "recall": 0.565,
+            "fbeta": 0.619
         },
         "Private": {
-            "precision": 0.776,
-            "recall": 0.526,
-            "fbeta": 0.627
+            "precision": 0.786,
+            "recall": 0.53,
+            "fbeta": 0.633
         },
         "Federal-gov": {
-            "precision": 0.812,
-            "recall": 0.512,
-            "fbeta": 0.628
+            "precision": 0.824,
+            "recall": 0.504,
+            "fbeta": 0.625
         },
         "Local-gov": {
-            "precision": 0.727,
-            "recall": 0.621,
-            "fbeta": 0.67
+            "precision": 0.74,
+            "recall": 0.619,
+            "fbeta": 0.674
         },
         "?": {
-            "precision": 0.571,
-            "recall": 0.529,
-            "fbeta": 0.549
+            "precision": 0.628,
+            "recall": 0.513,
+            "fbeta": 0.565
         },
         "Self-emp-inc": {
-            "precision": 0.842,
+            "precision": 0.836,
             "recall": 0.65,
-            "fbeta": 0.733
+            "fbeta": 0.731
         },
         "Without-pay": {
             "precision": 0.0,
@@ -48,24 +48,24 @@
     },
     "education": {
         "Bachelors": {
-            "precision": 0.699,
-            "recall": 0.858,
-            "fbeta": 0.77
+            "precision": 0.708,
+            "recall": 0.86,
+            "fbeta": 0.776
         },
         "HS-grad": {
-            "precision": 0.882,
-            "recall": 0.214,
-            "fbeta": 0.345
+            "precision": 0.887,
+            "recall": 0.221,
+            "fbeta": 0.354
         },
         "11th": {
-            "precision": 0.864,
-            "recall": 0.317,
-            "fbeta": 0.463
+            "precision": 0.952,
+            "recall": 0.333,
+            "fbeta": 0.494
         },
         "Masters": {
-            "precision": 0.786,
-            "recall": 0.859,
-            "fbeta": 0.821
+            "precision": 0.794,
+            "recall": 0.861,
+            "fbeta": 0.826
         },
         "9th": {
             "precision": 1.0,
@@ -73,34 +73,34 @@
             "fbeta": 0.2
         },
         "Some-college": {
-            "precision": 0.917,
-            "recall": 0.224,
-            "fbeta": 0.359
+            "precision": 0.923,
+            "recall": 0.225,
+            "fbeta": 0.362
         },
         "Assoc-acdm": {
-            "precision": 0.602,
-            "recall": 0.702,
-            "fbeta": 0.648
+            "precision": 0.655,
+            "recall": 0.551,
+            "fbeta": 0.598
         },
         "Assoc-voc": {
-            "precision": 0.842,
-            "recall": 0.235,
-            "fbeta": 0.368
+            "precision": 0.833,
+            "recall": 0.277,
+            "fbeta": 0.416
         },
         "7th-8th": {
-            "precision": 0.75,
-            "recall": 0.15,
-            "fbeta": 0.25
+            "precision": 0.7,
+            "recall": 0.175,
+            "fbeta": 0.28
         },
         "Doctorate": {
-            "precision": 0.847,
-            "recall": 0.83,
-            "fbeta": 0.838
+            "precision": 0.848,
+            "recall": 0.84,
+            "fbeta": 0.844
         },
         "Prof-school": {
-            "precision": 0.853,
-            "recall": 0.877,
-            "fbeta": 0.865
+            "precision": 0.852,
+            "recall": 0.887,
+            "fbeta": 0.869
         },
         "5th-6th": {
             "precision": 0.833,
@@ -108,9 +108,9 @@
             "fbeta": 0.455
         },
         "10th": {
-            "precision": 0.917,
-            "recall": 0.177,
-            "fbeta": 0.297
+            "precision": 1.0,
+            "recall": 0.194,
+            "fbeta": 0.324
         },
         "1st-4th": {
             "precision": 1.0,
@@ -124,25 +124,25 @@
         },
         "12th": {
             "precision": 1.0,
-            "recall": 0.242,
-            "fbeta": 0.39
+            "recall": 0.273,
+            "fbeta": 0.429
         }
     },
     "marital-status": {
         "Never-married": {
-            "precision": 0.881,
-            "recall": 0.287,
-            "fbeta": 0.433
+            "precision": 0.93,
+            "recall": 0.299,
+            "fbeta": 0.453
         },
         "Married-civ-spouse": {
-            "precision": 0.753,
+            "precision": 0.762,
             "recall": 0.604,
-            "fbeta": 0.671
+            "fbeta": 0.674
         },
         "Divorced": {
-            "precision": 0.839,
-            "recall": 0.248,
-            "fbeta": 0.383
+            "precision": 0.908,
+            "recall": 0.257,
+            "fbeta": 0.401
         },
         "Married-spouse-absent": {
             "precision": 0.8,
@@ -150,9 +150,9 @@
             "fbeta": 0.364
         },
         "Separated": {
-            "precision": 0.789,
-            "recall": 0.227,
-            "fbeta": 0.353
+            "precision": 0.941,
+            "recall": 0.242,
+            "fbeta": 0.386
         },
         "Married-AF-spouse": {
             "precision": 1.0,
@@ -160,76 +160,76 @@
             "fbeta": 0.462
         },
         "Widowed": {
-            "precision": 0.8,
+            "precision": 0.952,
             "recall": 0.235,
-            "fbeta": 0.364
+            "fbeta": 0.377
         }
     },
     "occupation": {
         "Adm-clerical": {
-            "precision": 0.681,
-            "recall": 0.408,
-            "fbeta": 0.51
+            "precision": 0.715,
+            "recall": 0.41,
+            "fbeta": 0.521
         },
         "Exec-managerial": {
-            "precision": 0.846,
-            "recall": 0.66,
-            "fbeta": 0.742
+            "precision": 0.847,
+            "recall": 0.662,
+            "fbeta": 0.743
         },
         "Handlers-cleaners": {
-            "precision": 0.556,
+            "precision": 0.568,
             "recall": 0.291,
-            "fbeta": 0.382
+            "fbeta": 0.385
         },
         "Prof-specialty": {
-            "precision": 0.783,
-            "recall": 0.772,
-            "fbeta": 0.778
+            "precision": 0.792,
+            "recall": 0.775,
+            "fbeta": 0.784
         },
         "Other-service": {
-            "precision": 0.432,
+            "precision": 0.479,
             "recall": 0.255,
-            "fbeta": 0.321
+            "fbeta": 0.333
         },
         "Sales": {
-            "precision": 0.746,
-            "recall": 0.553,
-            "fbeta": 0.636
+            "precision": 0.755,
+            "recall": 0.551,
+            "fbeta": 0.637
         },
         "Craft-repair": {
-            "precision": 0.704,
-            "recall": 0.308,
-            "fbeta": 0.428
+            "precision": 0.722,
+            "recall": 0.316,
+            "fbeta": 0.44
         },
         "Transport-moving": {
-            "precision": 0.654,
-            "recall": 0.266,
-            "fbeta": 0.378
+            "precision": 0.656,
+            "recall": 0.269,
+            "fbeta": 0.381
         },
         "Farming-fishing": {
-            "precision": 0.519,
+            "precision": 0.539,
             "recall": 0.478,
-            "fbeta": 0.498
+            "fbeta": 0.507
         },
         "Machine-op-inspct": {
-            "precision": 0.663,
-            "recall": 0.26,
-            "fbeta": 0.374
+            "precision": 0.66,
+            "recall": 0.248,
+            "fbeta": 0.36
         },
         "Tech-support": {
-            "precision": 0.75,
-            "recall": 0.456,
-            "fbeta": 0.567
+            "precision": 0.774,
+            "recall": 0.435,
+            "fbeta": 0.557
         },
         "?": {
-            "precision": 0.571,
-            "recall": 0.529,
-            "fbeta": 0.549
+            "precision": 0.628,
+            "recall": 0.513,
+            "fbeta": 0.565
         },
         "Protective-serv": {
-            "precision": 0.738,
-            "recall": 0.374,
-            "fbeta": 0.497
+            "precision": 0.743,
+            "recall": 0.37,
+            "fbeta": 0.494
         },
         "Armed-Forces": {
             "precision": 1.0,
@@ -244,29 +244,29 @@
     },
     "relationship": {
         "Not-in-family": {
-            "precision": 0.908,
-            "recall": 0.265,
-            "fbeta": 0.41
+            "precision": 0.948,
+            "recall": 0.277,
+            "fbeta": 0.429
         },
         "Husband": {
-            "precision": 0.75,
-            "recall": 0.613,
-            "fbeta": 0.675
+            "precision": 0.76,
+            "recall": 0.611,
+            "fbeta": 0.677
         },
         "Wife": {
-            "precision": 0.776,
-            "recall": 0.554,
-            "fbeta": 0.647
+            "precision": 0.783,
+            "recall": 0.566,
+            "fbeta": 0.657
         },
         "Own-child": {
-            "precision": 0.714,
-            "recall": 0.299,
-            "fbeta": 0.421
+            "precision": 0.783,
+            "recall": 0.269,
+            "fbeta": 0.4
         },
         "Unmarried": {
-            "precision": 0.722,
-            "recall": 0.239,
-            "fbeta": 0.359
+            "precision": 0.869,
+            "recall": 0.243,
+            "fbeta": 0.38
         },
         "Other-relative": {
             "precision": 0.9,
@@ -276,24 +276,24 @@
     },
     "race": {
         "White": {
-            "precision": 0.767,
+            "precision": 0.777,
             "recall": 0.556,
-            "fbeta": 0.644
+            "fbeta": 0.648
         },
         "Black": {
-            "precision": 0.741,
-            "recall": 0.465,
-            "fbeta": 0.571
+            "precision": 0.762,
+            "recall": 0.473,
+            "fbeta": 0.584
         },
         "Asian-Pac-Islander": {
-            "precision": 0.662,
+            "precision": 0.687,
             "recall": 0.659,
-            "fbeta": 0.661
+            "fbeta": 0.673
         },
         "Amer-Indian-Eskimo": {
-            "precision": 0.72,
+            "precision": 0.857,
             "recall": 0.5,
-            "fbeta": 0.59
+            "fbeta": 0.632
         },
         "Other": {
             "precision": 0.542,
@@ -303,26 +303,26 @@
     },
     "sex": {
         "Male": {
-            "precision": 0.756,
-            "recall": 0.573,
-            "fbeta": 0.652
+            "precision": 0.767,
+            "recall": 0.572,
+            "fbeta": 0.655
         },
         "Female": {
-            "precision": 0.783,
-            "recall": 0.449,
-            "fbeta": 0.57
+            "precision": 0.81,
+            "recall": 0.459,
+            "fbeta": 0.586
         }
     },
     "native-country": {
         "United-States": {
-            "precision": 0.77,
+            "precision": 0.781,
             "recall": 0.548,
-            "fbeta": 0.64
+            "fbeta": 0.645
         },
         "Cuba": {
-            "precision": 0.722,
+            "precision": 0.765,
             "recall": 0.52,
-            "fbeta": 0.605
+            "fbeta": 0.619
         },
         "Jamaica": {
             "precision": 0.4,
@@ -330,14 +330,14 @@
             "fbeta": 0.267
         },
         "India": {
-            "precision": 0.62,
+            "precision": 0.633,
             "recall": 0.775,
-            "fbeta": 0.689
+            "fbeta": 0.697
         },
         "?": {
-            "precision": 0.671,
-            "recall": 0.685,
-            "fbeta": 0.678
+            "precision": 0.682,
+            "recall": 0.692,
+            "fbeta": 0.687
         },
         "Mexico": {
             "precision": 0.591,
@@ -345,9 +345,9 @@
             "fbeta": 0.473
         },
         "South": {
-            "precision": 0.435,
+            "precision": 0.455,
             "recall": 0.625,
-            "fbeta": 0.513
+            "fbeta": 0.526
         },
         "Puerto-Rico": {
             "precision": 0.636,
@@ -360,39 +360,39 @@
             "fbeta": 1.0
         },
         "England": {
-            "precision": 0.679,
+            "precision": 0.704,
             "recall": 0.633,
-            "fbeta": 0.655
-        },
-        "Canada": {
-            "precision": 0.697,
-            "recall": 0.59,
-            "fbeta": 0.639
-        },
-        "Germany": {
-            "precision": 0.793,
-            "recall": 0.523,
-            "fbeta": 0.63
-        },
-        "Iran": {
-            "precision": 0.682,
-            "recall": 0.833,
-            "fbeta": 0.75
-        },
-        "Philippines": {
-            "precision": 0.774,
-            "recall": 0.672,
-            "fbeta": 0.719
-        },
-        "Italy": {
-            "precision": 0.824,
-            "recall": 0.56,
             "fbeta": 0.667
         },
+        "Canada": {
+            "precision": 0.71,
+            "recall": 0.564,
+            "fbeta": 0.629
+        },
+        "Germany": {
+            "precision": 0.8,
+            "recall": 0.545,
+            "fbeta": 0.649
+        },
+        "Iran": {
+            "precision": 0.714,
+            "recall": 0.833,
+            "fbeta": 0.769
+        },
+        "Philippines": {
+            "precision": 0.788,
+            "recall": 0.672,
+            "fbeta": 0.726
+        },
+        "Italy": {
+            "precision": 0.875,
+            "recall": 0.56,
+            "fbeta": 0.683
+        },
         "Poland": {
-            "precision": 0.636,
+            "precision": 0.583,
             "recall": 0.583,
-            "fbeta": 0.609
+            "fbeta": 0.583
         },
         "Columbia": {
             "precision": 0.25,
@@ -420,9 +420,9 @@
             "fbeta": 0.667
         },
         "Taiwan": {
-            "precision": 0.773,
+            "precision": 0.85,
             "recall": 0.85,
-            "fbeta": 0.81
+            "fbeta": 0.85
         },
         "Haiti": {
             "precision": 0.667,
@@ -440,14 +440,14 @@
             "fbeta": 0.667
         },
         "El-Salvador": {
-            "precision": 0.75,
+            "precision": 0.857,
             "recall": 0.667,
-            "fbeta": 0.706
+            "fbeta": 0.75
         },
         "France": {
-            "precision": 0.8,
-            "recall": 0.667,
-            "fbeta": 0.727
+            "precision": 0.75,
+            "recall": 0.5,
+            "fbeta": 0.6
         },
         "Guatemala": {
             "precision": 1.0,
@@ -455,9 +455,9 @@
             "fbeta": 0.5
         },
         "China": {
-            "precision": 0.586,
+            "precision": 0.607,
             "recall": 0.85,
-            "fbeta": 0.694
+            "fbeta": 0.708
         },
         "Japan": {
             "precision": 0.762,
@@ -495,19 +495,19 @@
             "fbeta": 0.667
         },
         "Nicaragua": {
-            "precision": 0.0,
-            "recall": 0.0,
-            "fbeta": 0.0
+            "precision": 0.5,
+            "recall": 0.5,
+            "fbeta": 0.5
         },
         "Vietnam": {
-            "precision": 0.273,
+            "precision": 0.333,
             "recall": 0.6,
-            "fbeta": 0.375
+            "fbeta": 0.429
         },
         "Hong": {
-            "precision": 0.8,
-            "recall": 0.667,
-            "fbeta": 0.727
+            "precision": 0.833,
+            "recall": 0.833,
+            "fbeta": 0.833
         },
         "Ireland": {
             "precision": 1.0,

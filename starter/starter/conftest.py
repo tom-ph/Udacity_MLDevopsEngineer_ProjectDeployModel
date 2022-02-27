@@ -44,6 +44,5 @@ def fix_processed_data(fix_X, fix_cat_features, fix_label):
 @pytest.fixture
 def fix_model(fix_cat_features):
     model = CatBoostClassifier()
-    print(fix_cat_features)
     model.load_model(sample_model_path)
     return model
