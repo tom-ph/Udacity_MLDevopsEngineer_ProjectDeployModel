@@ -1,10 +1,15 @@
 from catboost import CatBoostClassifier
+import os
 import pandas as pd
 import pytest
 import yaml
-from ml.data import process_data
+import sys
 
-with open('starter/starter/tests/tests_config.yaml') as stream:
+sys.path.append(os.getcwd())
+
+from starter.ml.data import process_data
+
+with open(os.path.join(os.getcwd(), 'starter/tests/tests_config.yaml')) as stream:
     config = yaml.safe_load(stream)
 sample_data_path = config["model_training"]["training_data_path"]
 sample_model_path = config["model_training"]["trained_model_path"]

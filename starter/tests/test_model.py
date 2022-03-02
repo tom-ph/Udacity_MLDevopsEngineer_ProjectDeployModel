@@ -1,5 +1,5 @@
 from catboost import CatBoostClassifier
-from ml.model import train_model, compute_model_metrics, evaluate_slice_metrics, inference
+from starter.ml.model import train_model, compute_model_metrics, evaluate_slice_metrics, inference
 
 
 def test_train_model(fix_processed_data, fix_grid_params, fix_cat_features, fix_iterations):

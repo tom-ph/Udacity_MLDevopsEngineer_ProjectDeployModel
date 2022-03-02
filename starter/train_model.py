@@ -10,10 +10,12 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Add the necessary imports for the starter code.
-from ml.data import process_data
-from ml.model import compute_model_metrics, evaluate_slice_metrics, train_model, inference
+import sys
+sys.path.append(os.getcwd())
+from starter.ml.data import process_data
+from starter.ml.model import compute_model_metrics, evaluate_slice_metrics, train_model, inference
 
-with open('starter/starter/config.yaml') as stream:
+with open(os.path.join(os.getcwd(), 'starter/config.yaml')) as stream:
     config = yaml.safe_load(stream)
 data_path = config["model_training"]["training_data_path"]
 model_path = config["model_training"]["trained_model_path"]
