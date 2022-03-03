@@ -31,7 +31,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        if [ -f starter/requirements_pytest.txt ]; then pip install -r starter/requirements_pytest.txt; else echo "pytest requirements file not found"; fi
+        if [ -f requirements_pytest.txt ]; then pip install -r requirements_pytest.txt; else echo "pytest requirements file not found"; fi
     - name: Pull files from dvc
       run: |
         dvc pull
