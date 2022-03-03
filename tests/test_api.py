@@ -19,19 +19,23 @@ def test_api_locally_get_root():
     assert r.status_code == 200
     assert json.loads(r.content)["message"]==test_message
 
-def test_api_locally_predict():
+def test_api_locally_predict_0():
     data = InputData.Config.schema_extra["example"]
     r = client.post("/predict/", json=data)
+    result = r.json()
     assert r.status_code == 200
-    assert "predictions" in r.json()
-    assert isinstance(r.json()["predictions"], list)
+    assert "predictions" in result
+    assert isinstance(result["predictions"], list)
+    assert result["predictions"][0]=="<=50K"
 
-def test_api_locally_predict_batch():
-    data = [InputData.Config.schema_extra["example"], InputData.Config.schema_extra["example"]]
+def test_api_locally_predict_1():
+    data = InputData.Config.schema_extra["example_1"]
     r = client.post("/predict/", json=data)
+    result = r.json()
     assert r.status_code == 200
-    assert "predictions" in r.json()
-    assert isinstance(r.json()["predictions"], list)
+    assert "predictions" in result
+    assert isinstance(result["predictions"], list)
+    assert result["predictions"][0]==">50K"
 
 if __name__=="__main__":
     pass

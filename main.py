@@ -56,6 +56,22 @@ class InputData(BaseModel):
                 "capital_loss": 0,
                 "hours_per_week": 40,
                 "native_country": "Italy"
+            },
+            "example_1": {
+                "age": 50,
+                "workclass": "Private",
+                "fnlgt": 174391,
+                "education": "Doctorate",
+                "education_num": 16,
+                "marital_status": "Never-married",
+                "occupation": "Prof-specialty",
+                "relationship": "Own-child",
+                "race": "White",
+                "sex": "Male",
+                "capital_gain": 0,
+                "capital_loss": 0,
+                "hours_per_week": 60,
+                "native_country": "United-States"
             }
         }
 
