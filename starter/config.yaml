@@ -14,7 +14,7 @@ model_training:
   trained_model_path: model/model.cbm
   label_encoder: model/label_encoder.pkl
   metrics_folder_path: metrics
-  training_iterations: 1000
+  training_iterations: 500
   model_grid_search_hparams:
     learning_rate: 
     - 0.05

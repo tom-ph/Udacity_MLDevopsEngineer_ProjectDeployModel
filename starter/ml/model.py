@@ -3,7 +3,7 @@ from sklearn.metrics import fbeta_score, precision_score, recall_score
 
 
 # Optional: implement hyperparameter tuning.
-def train_model(X_train, y_train, grid_params, cat_features=None, iterations=None):
+def train_model(X_train, y_train, grid_params, cat_features=None, iterations=None, balance_classes=False):
     """
     Trains a machine learning model and returns it.
 
@@ -26,7 +26,11 @@ def train_model(X_train, y_train, grid_params, cat_features=None, iterations=Non
     grid_search_result : dict
         A dict with the best parameters and the test results
     """
-    model = CatBoostClassifier(cat_features=cat_features, iterations=iterations)
+    if balance_classes:
+        auto_class_weights = 'SqrtBalanced'
+    else:
+        auto_class_weights = None
+    model = CatBoostClassifier(cat_features=cat_features, iterations=iterations, auto_class_weights=auto_class_weights)
 
     grid_search_result = model.grid_search(grid_params,
                                         X=X_train,

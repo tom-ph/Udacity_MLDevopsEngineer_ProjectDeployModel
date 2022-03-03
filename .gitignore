@@ -130,3 +130,4 @@ dmypy.json
 
 # catboost info
 catboost_info
+.vscode

@@ -1,10 +1,13 @@
 from catboost import CatBoostClassifier
 from typing import Union
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
+import pandas as pd
 import pickle
 from pydantic import BaseModel
 import yaml
 
+from starter.ml.data import process_data
 from starter.ml.model import inference
 
 app = FastAPI()
@@ -13,6 +16,7 @@ with open('starter/config.yaml') as stream:
     config = yaml.safe_load(stream)
 label_encoder_path = config["model_training"]["label_encoder"]
 model_path = config["model_training"]["trained_model_path"]
+cat_features = config["data"]["categorical_features"]
 model = CatBoostClassifier()
 model.load_model(model_path)
 with open(label_encoder_path, 'rb') as pkl_file:
@@ -65,7 +69,14 @@ async def greetings():
 async def predict(input_data: Union[InputData, list]):
     if isinstance(input_data, InputData):
         input_data = [input_data]
-    preds = inference(model, input_data)
-    decoded_preds = label_encoder.inverse_transform(preds)
+    input_data = [jsonable_encoder(row) for row in input_data]
+    X = pd.DataFrame(input_data)
+    X_prep, _, _ = process_data(X, cat_features, training=False, lb=label_encoder)
+    preds = inference(model, X_prep)
+    decoded_preds = list(label_encoder.inverse_transform(preds))
     return {"predictions": decoded_preds}
+
+
+if __name__=="__main__":
+    pass
     

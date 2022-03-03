@@ -46,7 +46,14 @@ with open(label_encoder_path, 'wb') as output:
 print(y_train.value_counts())
 
 # Train and save a model.
-model, best_params = train_model(X_train, y_train, grid_search_params, cat_features=cat_features, iterations=train_iterations)
+model, best_params = train_model(
+    X_train, 
+    y_train, 
+    grid_search_params, 
+    cat_features=cat_features, 
+    iterations=train_iterations,
+    balance_classes=True
+)
 model.save_model(model_path)
 
 # Evaluate the metrics over the entire dataset since cross-validation was performed

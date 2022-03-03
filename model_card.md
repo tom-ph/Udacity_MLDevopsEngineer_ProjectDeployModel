@@ -23,8 +23,25 @@ The model was trained on the [Census Income public dataset](https://archive.ics.
 ## Evaluation Data
 The model was trained using cross-validation over the entire dataset.
 
-## Metrics
+## Training tecnique
+The training was performed using hyperparameter tuning, with 500 iterations for each combination of hyperparameters.
+The following hyperparameters were evaluated:
+- learning_rate: 
+    - 0.05
+    - 0.1
+- depth: 
+    - 6
+    - 8
+    - 10
 
+The best results were obtained with a **0.05** learning rate and a depth of **6**.
+To address the class imbalance, the *auto-class-weights* parameter of the CatBoost was set to **SqrtBalanced**.
+
+## Metrics
+During the training, the model was evaluated with the test loss. The best test loss result was 0.313.
+To better evaluate the model, three additional metrics were chosen: **Precision**, **Recall** and **F1-score**.
+The best model reached a **71.3%** precision, **79.9%** recall and **75.3%** F1-score.
+However some sliced metrics had way lower results, specially in terms of recall (for example some group of *education* and *race*). You should always consider these sliced metrics when you use this model for inference. 
 
 ## Ethical Considerations
 This model should not be seen as an indicator to determine if someone deserves more or less money.
