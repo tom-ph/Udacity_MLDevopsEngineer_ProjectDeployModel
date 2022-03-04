@@ -1,4 +1,5 @@
 [core]
     remote = s3
+    hardlink_lock = true
 ['remote "s3"']
     url = s3://udacitymlopsprojectmodeldeploy
