@@ -1,0 +1,8 @@
+# you can list packages
+
+
+# or include links to specific .deb files
+https://github.com/iterative/dvc/releases/download/2.0.18/dvc_2.0.18_amd64.deb
+
+
+# or add custom apt repos (only required if using packages outside of the standard Ubuntu APT repositories)
