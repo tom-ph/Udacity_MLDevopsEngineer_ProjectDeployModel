@@ -9,4 +9,4 @@ PyYAML
 uvicorn
 gunicorn
 pydantic
-dvc[boto3]
+dvc[s3]
