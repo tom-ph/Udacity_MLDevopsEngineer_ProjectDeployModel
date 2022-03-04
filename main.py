@@ -13,6 +13,7 @@ from starter.ml.model import inference
 import os
 
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc remote add -df s3 s3://udacitymlopsprojectmodeldeploy")
     os.system("dvc config core.no_scm true")
     os.system("dvc config core.hardlink_lock true")
     if os.system("dvc pull --force") != 0:
