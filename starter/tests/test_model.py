@@ -1,4 +1,9 @@
 from catboost import CatBoostClassifier
+import os
+import sys
+
+sys.path.append(os.getcwd())
+
 from starter.ml.model import train_model, compute_model_metrics, evaluate_slice_metrics, inference
 
 
