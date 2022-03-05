@@ -1,3 +1,4 @@
+uvicorn
 catboost
 numpy
 pandas
@@ -6,6 +7,5 @@ pytest
 requests
 fastapi==0.63.0
 PyYAML
-uvicorn
 gunicorn
 pydantic
