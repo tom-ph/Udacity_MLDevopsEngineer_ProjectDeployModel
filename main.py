@@ -14,6 +14,7 @@ import os
 
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("dvc remote add -df s3 s3://udacitymlopsprojectmodeldeploy")
+    os.system("dvc remote modify s3 use_ssl false")
     os.system("dvc config core.no_scm true")
     os.system("dvc config core.hardlink_lock true")
     pull_result = os.system("dvc pull --force")
