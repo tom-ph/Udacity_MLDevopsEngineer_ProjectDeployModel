@@ -22,7 +22,7 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
         print("dvc pull may have failed failed with status code " + str(pull_result))
         os.system("rm -r .dvc/tmp/lock")
         pull_result = os.system("dvc pull --force")
-    #os.system("rm -r .dvc .apt/usr/lib/dvc")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
 
 app = FastAPI()
 
